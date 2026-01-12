@@ -1,9 +1,12 @@
-import Homepage from "./components/Homepage.jsx";
+import { Routes, Route } from "react-router-dom";
+import Homepage from "./components/Homepage";
+import CategoriesPage from "./pages/CategoriesPage";
 
-function App() {
+export default function App() {
   return (
-    <Homepage />
+    <Routes>
+      <Route path="/" element={<Homepage />} />
+      <Route path="/categories" element={<CategoriesPage />} />
+    </Routes>
   );
 }
-
-export default App;
