@@ -23,6 +23,9 @@ export default function Sidebar() {
         <NavLink to="/favorites" className="nav-item">
           Favoriten
         </NavLink>
+        <NavLink to="/bookings" className="nav-item">
+        Käufe
+        </NavLink>
         <NavLink to="/profile" className="nav-item">
           Profil
         </NavLink>

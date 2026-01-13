@@ -9,7 +9,7 @@ export default function Topbar() {
         <span className="icon" />
       </div>
 
-      <div className="username">Username</div>
+      <div className="username">{localStorage.getItem("username")}</div>
     </header>
   );
 }
