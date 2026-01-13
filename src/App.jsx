@@ -1,12 +1,35 @@
 import { Routes, Route } from "react-router-dom";
 import Homepage from "./components/Homepage";
 import CategoriesPage from "./pages/CategoriesPage";
+import LoginPage from "./pages/LoginPage";
+import RegisterPage from "./pages/RegisterPage";
+import ProtectedRoute from "./components/ProtectedRoute"; // Wichtig!
 
 export default function App() {
   return (
     <Routes>
-      <Route path="/" element={<Homepage />} />
-      <Route path="/categories" element={<CategoriesPage />} />
+      {/* Login und Registrierung sind frei zugänglich */}
+      <Route path="/login" element={<LoginPage />} />
+      <Route path="/register" element={<RegisterPage />} />
+
+      {/* Alle anderen Seiten sind geschützt */}
+      <Route 
+        path="/" 
+        element={
+          <ProtectedRoute>
+            <Homepage />
+          </ProtectedRoute>
+        } 
+      />
+      <Route 
+        path="/categories" 
+        element={
+          <ProtectedRoute>
+            <CategoriesPage />
+          </ProtectedRoute>
+        } 
+      />
+      <Route path="*" element={<div>Seite nicht gefunden</div>} />
     </Routes>
   );
 }
