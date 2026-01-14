@@ -8,6 +8,7 @@ import CategoryCard from "./ui/CategoryCard";
 import CarCard from "./ui/CarCard";
 import HeroBanner from "./ui/HeroBanner";
 import CTABox from "./ui/CTABox";
+import { Link } from "react-router-dom";
 
 export default function Homepage() {
   return (
@@ -19,7 +20,10 @@ export default function Homepage() {
         <HeroBanner />
 
         <section className="section">
-          <SectionHeader title="Fahrzeugkategorien" action="Alle ansehen" />
+          <SectionHeader
+            title="Fahrzeugkategorien"
+            action={<Link to="/categories">Alle ansehen</Link>}
+          />
           <div className="category-grid">
             <CategoryCard title="Compact" description="Klein & effizient" />
             <CategoryCard title="Elektrik" description="Nachhaltig & modern" />

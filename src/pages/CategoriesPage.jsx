@@ -3,6 +3,7 @@ import Topbar from "../components/layout/Topbar";
 import SectionHeader from "../components/ui/SectionHeader";
 import CategoryCard from "../components/ui/CategoryCard";
 import "../components/Homepage.css"; // gleicher Style!
+import { Link } from "react-router-dom";
 
 export default function CategoriesPage() {
   return (
@@ -22,7 +23,7 @@ export default function CategoriesPage() {
         <section className="section">
           <SectionHeader
             title="Alle Kategorien"
-            action="Filter zurücksetzen"
+            action={<Link to="/">Filter zurücksetzen</Link>}
           />
 
           <div className="category-grid">
