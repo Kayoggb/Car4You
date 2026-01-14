@@ -4,6 +4,7 @@ import CategoriesPage from "./pages/CategoriesPage";
 import LoginPage from "./pages/LoginPage";
 import RegisterPage from "./pages/RegisterPage";
 import ProtectedRoute from "./components/ProtectedRoute"; // Wichtig!
+import BookingsPage from "./pages/BookingsPage";
 
 export default function App() {
   return (
@@ -28,6 +29,14 @@ export default function App() {
             <CategoriesPage />
           </ProtectedRoute>
         } 
+      />
+      <Route
+        path="/bookings"
+        element={
+          <ProtectedRoute>
+            <BookingsPage />
+          </ProtectedRoute>
+        }
       />
       <Route path="*" element={<div>Seite nicht gefunden</div>} />
     </Routes>
