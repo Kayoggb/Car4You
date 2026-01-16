@@ -1,0 +1,141 @@
+/* ProfilePage.css - Desktop Only */
+
+/* Grundlayout */
+.homepage {
+  display: flex;
+  height: 100vh;
+  font-family: 'Arial', sans-serif;
+  background-color: #f9f9f9;
+}
+
+.main {
+  flex: 1;
+  padding: 2rem;
+  overflow-y: auto;
+}
+
+/* Hero Banner */
+.hero-banner {
+  background-color: #004aad;
+  color: white;
+  padding: 2rem;
+  border-radius: 12px;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+/* Sections */
+.section {
+  margin-bottom: 2.5rem;
+}
+
+/* Profil-Karten */
+.car-grid {
+  display: flex;
+  justify-content: center;
+}
+
+.car-card {
+  background-color: white;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  max-width: 400px;
+  text-align: center;
+}
+
+.car-card .car-image {
+  width: 100px;
+  height: 100px;
+  background-color: #e0e0e0;
+  border-radius: 50%;
+  margin: 0 auto 1rem;
+}
+
+.car-card h4 {
+  margin-bottom: 0.5rem;
+  font-size: 1.25rem;
+}
+
+.car-card p {
+  margin: 0.25rem 0;
+  font-size: 0.95rem;
+  color: #555;
+}
+
+.car-card button {
+  margin-top: 1rem;
+  padding: 0.6rem 1.5rem;
+  background-color: #004aad;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.2s;
+}
+
+.car-card button:hover {
+  background-color: #003680;
+}
+
+/* Einstellungen */
+.category-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+}
+
+.category-card {
+  background-color: white;
+  border-radius: 12px;
+  padding: 1rem;
+  text-align: center;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.category-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+}
+
+.category-icon {
+  width: 40px;
+  height: 40px;
+  background-color: #004aad;
+  border-radius: 50%;
+  margin: 0 auto 0.8rem;
+}
+
+.category-card div {
+  font-size: 0.95rem;
+  color: #333;
+  margin-bottom: 0.25rem;
+}
+
+/* CTA Box */
+.cta-box {
+  background-color: #004aad;
+  color: white;
+  padding: 1.5rem;
+  border-radius: 12px;
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.cta-box button {
+  margin-top: 1rem;
+  padding: 0.6rem 1.5rem;
+  background-color: white;
+  color: #004aad;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.cta-box button:hover {
+  background-color: #e0e0e0;
+}

@@ -1,4 +1,4 @@
-import "../components/Homepage.css";
+import "./ProfilePage.css";
 
 import Sidebar from "../components/layout/Sidebar";
 import Topbar from "../components/layout/Topbar";
@@ -13,7 +13,11 @@ export default function ProfilePage() {
 
       <main className="main">
         <Topbar />
-        <HeroBanner />
+
+        <section className="hero">
+          <h2>Ihr Profil</h2>
+          <p>Eine Übersicht Ihrer persönlichen Daten und Einstellungen</p>
+        </section>
 
         <section className="section">
           <SectionHeader title="Mein Profil" action="Bearbeiten" />

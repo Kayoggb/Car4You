@@ -14,7 +14,11 @@ export default function BookingsPage() {
 
       <main className="main">
         <Topbar />
-        <HeroBanner />
+
+        <section className="hero">
+          <h2>Ihre Buchungen</h2>
+          <p>Eine Übersicht Ihrer aktuellen Buchungen</p>
+        </section>
 
         <section className="section">
           <SectionHeader title="Meine Buchungen" action="Alle anzeigen" />

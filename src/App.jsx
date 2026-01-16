@@ -6,6 +6,7 @@ import RegisterPage from "./pages/RegisterPage";
 import ProtectedRoute from "./components/ProtectedRoute"; // Wichtig!
 import BookingsPage from "./pages/BookingsPage";
 import ProfilePage from "./pages/ProfilePage";
+import FavouritesPage from "./pages/FavouritesPage";
 
 export default function App() {
   return (
@@ -45,6 +46,14 @@ export default function App() {
         element={
           <ProtectedRoute>
             <ProfilePage />
+          </ProtectedRoute>
+        }
+      />
+      <Route
+        path="/favorites"
+        element={
+          <ProtectedRoute>
+            <FavouritesPage />
           </ProtectedRoute>
         }
       />

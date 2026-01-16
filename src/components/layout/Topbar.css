@@ -1,0 +1,46 @@
+/* Topbar.css */
+
+.topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 24px;
+  background-color: #2563eb; /* Blaues Topbar-Band */
+  border-radius: 0 0 12px 12px; /* optional abgerundete Unterkante */
+  color: white; /* Standardtextfarbe weiß */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.search {
+  flex: 1;
+  padding: 10px 14px;
+  border-radius: 10px;
+  border: none;
+  background: white; /* Suchfeld weiß */
+  color: #111827; /* Dunkler Text im Input */
+  font-size: 14px;
+  margin-right: 16px;
+}
+
+.search::placeholder {
+  color: #9ca3af; /* hellgrauer Platzhaltertext */
+}
+
+.topbar-icons {
+  display: flex;
+  gap: 10px;
+  margin-right: 16px;
+}
+
+.icon {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background-color: #e0e7ff; /* heller Hintergrund für Icons */
+  display: inline-block;
+}
+
+.username {
+  font-weight: 600;
+  color: white; /* Benutzername weiß auf blau */
+}
