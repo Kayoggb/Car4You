@@ -3,10 +3,12 @@ import Homepage from "./components/Homepage";
 import CategoriesPage from "./pages/CategoriesPage";
 import LoginPage from "./pages/LoginPage";
 import RegisterPage from "./pages/RegisterPage";
-import ProtectedRoute from "./components/ProtectedRoute"; // Wichtig!
+import ProtectedRoute from "./components/ProtectedRoute";
 import BookingsPage from "./pages/BookingsPage";
 import ProfilePage from "./pages/ProfilePage";
 import FavouritesPage from "./pages/FavouritesPage";
+import CategoryDetailPage from "./pages/CategoryDetailPage";   // NEU
+import CarDetailPage from "./pages/CarDetailPage";             // NEU
 
 export default function App() {
   return (
@@ -40,7 +42,6 @@ export default function App() {
           </ProtectedRoute>
         }
       />
-
       <Route
         path="/profile"
         element={
@@ -57,6 +58,24 @@ export default function App() {
           </ProtectedRoute>
         }
       />
+      {/* Detailseiten für Kategorie und Fahrzeuge */}
+      <Route
+        path="/kategorie/:slug"
+        element={
+          <ProtectedRoute>
+            <CategoryDetailPage />
+          </ProtectedRoute>
+        }
+      />
+      <Route
+        path="/auto/:slug"
+        element={
+          <ProtectedRoute>
+            <CarDetailPage />
+          </ProtectedRoute>
+        }
+      />
+      {/* Fallback für unbekannte Seiten */}
       <Route path="*" element={<div>Seite nicht gefunden</div>} />
     </Routes>
   );

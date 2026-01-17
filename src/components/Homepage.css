@@ -188,3 +188,40 @@ body {
   background: #bfdbfe;
   border-radius: 20px;
 }
+.category-card {
+  background: white;
+  padding: 20px;
+  border-radius: 16px;
+  color: #111827; /* Textfarbe explizit */
+  text-align: center;
+  align-items: center;
+  align-content: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* Der Button innerhalb der Kategorie-Card soll genauso aussehen wie bei Car */
+.category-card button {
+  margin-top: 10px;
+  padding: 10px 15px;
+  background-color: #2563eb;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+/* Das Icon bleibt mittig */
+.category-icon {
+  width: 48px;
+  height: 48px;
+  background: #dbeafe;
+  border-radius: 50%;
+  margin-bottom: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+}
