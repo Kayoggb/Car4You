@@ -132,6 +132,27 @@ export const vehicles = {
         }
     ],
 
+    luxury: [
+        {
+            slug: "mercedes-s-class",
+            title: "Mercedes S-Class",
+            category: "Luxury",
+            price: 250,
+            image: "https://images.unsplash.com/photo-1629019879059-2a0345f93aea?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+            transmission: "Automatik",
+            seats: 5
+        },
+        {
+            slug: "bmw-8-series",
+            title: "BMW 8 Series",
+            category: "Luxury",
+            price: 240,
+            image: "https://images.unsplash.com/photo-1711711112606-d08c2f2190b7?q=80&w=735&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+            transmission: "Automatik",
+            seats: 5
+        }
+    ],
+
     elektrik: [
         {
             slug: "tesla-model-3",
