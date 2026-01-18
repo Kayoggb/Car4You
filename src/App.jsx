@@ -9,17 +9,16 @@ import ProfilePage from "./pages/ProfilePage";
 import FavouritesPage from "./pages/FavouritesPage";
 import CategoryDetailPage from "./pages/CategoryDetailPage";
 import CarDetailPage from "./pages/CarDetailPage";
+import BookingPage from "./pages/BookingPage"; // <--- Neu hinzufügen!
 import { FavoritesProvider } from "./context/FavoritesContext";
 
 export default function App() {
     return (
         <FavoritesProvider>
             <Routes>
-                {/* Login und Registrierung sind frei zugänglich */}
                 <Route path="/login" element={<LoginPage />} />
                 <Route path="/register" element={<RegisterPage />} />
 
-                {/* Alle anderen Seiten sind geschützt */}
                 <Route
                     path="/"
                     element={
@@ -74,6 +73,15 @@ export default function App() {
                     element={
                         <ProtectedRoute>
                             <CarDetailPage />
+                        </ProtectedRoute>
+                    }
+                />
+                {/* Route für den Buchungsprozess */}
+                <Route
+                    path="/buchung/:slug"
+                    element={
+                        <ProtectedRoute>
+                            <BookingPage />
                         </ProtectedRoute>
                     }
                 />
