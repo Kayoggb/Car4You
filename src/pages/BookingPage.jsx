@@ -22,6 +22,7 @@ export default function BookingPage() {
         zip: "",
         city: "",
         country: "",
+        pickupLocation: "", // <-- NEU
         cardNumber: "",
         cardExpiry: "",
         cardCVC: ""
@@ -54,6 +55,7 @@ export default function BookingPage() {
     const isZipValid = /^[0-9]{4,5}$/.test(formData.zip.trim());
     const isCityValid = formData.city.trim().length > 0;
     const isCountryValid = formData.country.trim().length > 0;
+    const isPickupLocationValid = formData.pickupLocation.trim().length > 0; // <-- NEU
 
     const isCardNumberValid = /^[0-9]{16}$/.test(formData.cardNumber.replace(/ /g, ""));
     const isCardExpiryValid = /^(0[1-9]|1[0-2])\/\d{2}$/.test(formData.cardExpiry.trim());
@@ -68,6 +70,7 @@ export default function BookingPage() {
         isZipValid &&
         isCityValid &&
         isCountryValid &&
+        isPickupLocationValid && // <-- NEU
         isCardNumberValid &&
         isCardExpiryValid &&
         isCardCVCValid;
@@ -233,6 +236,25 @@ export default function BookingPage() {
                                     {!isPhoneValid && (
                                         <div style={{ color: "red", fontSize: "0.9rem", marginTop: 4 }}>
                                             Bitte geben Sie eine gültige Schweizer Telefonnummer ein.
+                                        </div>
+                                    )}
+                                </label>
+
+                                {/* Abholort */}
+                                <label style={{ display: "block", marginBottom: "1.5rem" }}>
+                                    Abholort
+                                    <input
+                                        type="text"
+                                        name="pickupLocation"
+                                        value={formData.pickupLocation}
+                                        onChange={handleChange}
+                                        required
+                                        style={{ marginLeft: 12, width: "100%", padding: "0.6rem" }}
+                                        placeholder="z.B. Zürich HB"
+                                    />
+                                    {!isPickupLocationValid && (
+                                        <div style={{ color: "red", fontSize: "0.9rem", marginTop: 4 }}>
+                                            Bitte geben Sie einen Abholort an.
                                         </div>
                                     )}
                                 </label>
