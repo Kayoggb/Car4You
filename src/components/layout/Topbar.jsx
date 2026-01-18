@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import "./Topbar.css";
 
 export default function Topbar() {
@@ -11,7 +12,9 @@ export default function Topbar() {
         <span className="icon" />
       </div>
 
+      <Link to="/profile">
       <div className="username">{localStorage.getItem("username")}</div>
+      </Link>
     </header>
   );
 }

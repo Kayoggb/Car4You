@@ -25,10 +25,10 @@ export default function Homepage() {
             action={<Link to="/categories">Alle ansehen</Link>}
           />
           <div className="category-grid">
-            <CategoryCard title="Compact" description="Klein & effizient" />
-            <CategoryCard title="Elektrik" description="Nachhaltig & modern" />
-            <CategoryCard title="SUV" description="Viel Platz & Komfort" />
-            <CategoryCard title="Luxury" description="Premium Fahrzeuge" />
+            <CategoryCard title="Compact" description="Perfekt für die Stadt" type="category" slug="compact" />
+                        <CategoryCard title="SUV" description="Mehr Platz & Komfort" type="category" slug="suv" />
+                        <CategoryCard title="Elektrik" description="Modern & nachhaltig" type="category" slug="elektrik" />
+                        <CategoryCard title="Luxury" description="Premium Erlebnis" type="category" slug="luxury" />
           </div>
         </section>
 
